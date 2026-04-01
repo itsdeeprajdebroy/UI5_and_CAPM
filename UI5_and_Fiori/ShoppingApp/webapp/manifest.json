@@ -1,0 +1,89 @@
+{
+    "sap.app":{
+        "id":"ddi.mm.Shopping",
+        "type":"application",
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "i18n": "i18n/i18n.properties",
+        "dataSources": {
+            "CategoryServices":{
+                "uri": "/V2/Northwind/Northwind.svc/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            }
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "deviceTypes":{
+            "desktop": true,
+            "phone": true,
+            "tablet": true
+        }
+    },
+    "sap.ui5":{
+        "dependencies": {
+            "minUI5Version":"1.120.0",
+            "libs": {
+                "sap.m":{},
+                "sap.ui.layout":{},
+                "sap.ui.core":{}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "ddi.mm.Shopping.i18n.i18n"
+                }
+            },
+            "":{
+                "dataSource": "CategoryServices"
+            }
+        },
+        "rootView": {
+            "viewName": "ddi.mm.Shopping.view.App",
+            "id": "idView",
+            "type": "XML"
+        },
+        "routing": {
+            "config":{
+                "routerClass": "sap.m.routing.Router",
+                "viewPath": "ddi.mm.Shopping.view",
+                "viewType": "XML",
+                "controlId": "appCon"
+            },
+            "routes":[
+                {
+                    "name": "firstRoute",
+                    "pattern": "",
+                    "target":[
+                        "TargetHome",
+                        "TargetEmpty"
+                    ]
+                }
+            ],
+            "targets": {
+                "TargetHome":{
+                    "viewId": "Home",
+                    "viewName": "Home",
+                    "controlAggregation": "beginColumnPages"
+                },
+                "TargetEmpty":{
+                    "viewId": "Empty",
+                    "viewName": "Empty",
+                    "controlAggregation": "midColumnPages"
+                }
+            }
+        }
+    }
+}

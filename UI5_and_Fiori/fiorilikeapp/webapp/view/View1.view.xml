@@ -1,0 +1,55 @@
+<mvc:View xmlns:layout="sap.ui.layout" 
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="ddi.mm.Product.controller.View1">
+    <Page title="{listView>/listTitle}">
+        <headerContent>
+          <Button 
+            icon="sap-icon://action" 
+            press="onNext"/>
+        </headerContent>
+       <content>
+        <SearchField search="onSearch"/>
+        <List 
+          id="idList" 
+          items="{/fruits}"
+          mode="SingleSelectMaster"
+          delete="onDelete"
+          selectionChange="onItemPress"
+          updateFinished="onUpdateFinished">
+          <headerToolbar>
+            <Toolbar>
+              <ToolbarSpacer />
+              <Button 
+                icon="sap-icon://delete" 
+                press="onDeleteSelected"
+                enabled="{listView>/isEnabled}">
+                  <layoutData>
+                    <layout:GridData span="L12 M6 S12"/>
+                  </layoutData>
+              </Button>
+            </Toolbar>
+          </headerToolbar>
+          <!-- Examples of different types of List items is kept on Word file -->
+          <ObjectListItem 
+            title="{name}" 
+            intro="{healthBenefit}" 
+            icon="{image}" 
+            number="{price}" 
+            numberUnit="{unit}">
+            <attributes>
+              <ObjectAttribute 
+                title="Taste" 
+                text="{type}"/>
+            </attributes>
+            <firstStatus>
+              <ObjectStatus text="{path:'status',
+                                  formatter: '.formatter.getStatus'}"
+                            state="{path:'status',
+                                  formatter: '.formatter.getStatusColor'}"/>
+            </firstStatus>
+          </ObjectListItem>
+        </List>
+       </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,192 @@
+<html>
+    <head>
+        <!-- Internal CSS -->
+        <style>
+                        /* Important to note height width of elemnt needs to set on element itself */
+            
+            img{
+                width: 300px;
+                height: 300px;
+            }
+            .img-css{
+                /* this float property also change the display property of div might be or forefully */
+                float: left;
+                margin: 5px;
+                padding: 50px;
+            } 
+            
+            /* pseudo classes */
+            img:hover{
+                opacity: 0.6;
+                /* border: 2px solid red; */
+            }
+            .img-css:hover{
+                border: 2px solid red;
+            }
+            #myName_1{
+                background-color: black;
+                color: white;
+            }
+            input:focus{
+                background-color: aquamarine;
+                font-family: 'Times New Roman', Times, serif;
+                font-style: italic;
+                font-weight: bold;
+                color: blueviolet;
+            }
+            li{
+                float: left;
+                padding: 5px;
+                /* helps to remove . */
+                list-style: none;
+                background-color: brown;
+                border: 2px solid pink;
+            }
+            /* specific selctor styling */
+            li a{
+                text-decoration: none;
+                color: aqua;
+                text-transform: uppercase;
+            }
+
+            li:hover{
+                background-color: cadetblue;
+            }
+
+
+            /* with , we can write two same style for diffrent element */
+            #music th, #music td{
+                border: 1px solid black;
+            }
+
+            /* it will collapse the border spaces and make it single, need to add directly on table as it is table property */
+            #music{
+                border-collapse: collapse;
+                text-align: center;
+            }
+
+            thead th{
+                background-color: brown;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-weight: bolder;
+                color: azure;
+            }
+
+            /* alternate table colouring */
+            #music tbody tr:nth-child(even){
+                background-color: yellowgreen;
+            }
+
+            #music tbody tr:nth-child(odd){
+                background-color: orangered;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <!-- Parent elements expand to fit their children by default in box model -->
+        <div class="img-css">
+            <img src="../Basics/Images/vd-photography-gZZTHQtBZTE-unsplash.jpg">
+        </div>  
+        <div class="img-css">
+            <img src="../Basics/Images/vd-photography-gZZTHQtBZTE-unsplash.jpg">
+        </div>
+        <div class="img-css">
+            <img src="../Basics/Images/vd-photography-gZZTHQtBZTE-unsplash.jpg">
+        </div>
+
+        <br>
+
+        
+        <div style="clear: left;"></div>
+
+
+        <a href="https://www.w3schools.com">UI5</a>
+
+        <div style="clear: left;"></div>
+
+        <ul>
+            <li><a href="https://www.w3schools.com">UI5 and Fiori</a></li>
+            <li><a href="https://www.w3schools.com">ABAP on Hana</a></li>
+            <li><a href="https://www.w3schools.com">Routers and Principles</a></li>
+        </ul>
+
+        <div style="clear: left;"></div>
+
+        <br><br>
+
+
+        <table id="music">
+            <thead>
+                <tr>
+                    <th>Songs</th>
+                    <th>Singer</th>
+                    <th>Audio Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Kabi alvida na kehna</td>
+                    <td>K K</td>
+                    <td><audio src="https://www.w3schools.com/html/horse.ogg" controls></audio></td>
+                </tr>
+                <tr>
+                    <td>Mann jogiya re</td>
+                    <td>Arijit</td>
+                    <td><audio src="https://www.w3schools.com/html/horse.ogg" controls></audio></td>
+                </tr>
+                <tr>
+                    <td>Tuje bula diya</td>
+                    <td>K K</td>
+                    <td><audio src="https://www.w3schools.com/html/horse.ogg" controls></audio></td>
+                </tr>
+                <tr>
+                    <td>diya</td>
+                    <td>Mobas</td>
+                    <td><audio src="https://www.w3schools.com/html/horse.ogg" controls></audio></td>
+                </tr>
+                <tr>
+                    <td>bula diya</td>
+                    <td>Rehman</td>
+                    <td><audio src="https://www.w3schools.com/html/horse.ogg" controls></audio></td>
+                </tr>
+                <tr>
+                    <td>Diya</td>
+                    <td>Sanam puri</td>
+                    <td><audio src="https://www.w3schools.com/html/horse.ogg" controls></audio></td>
+                </tr>
+                <tr>
+                    <td>Hakla sarukh</td>
+                    <td>Salaman</td>
+                    <td><audio src="https://www.w3schools.com/html/horse.ogg" controls></audio></td>
+                </tr>
+            </tbody>
+        </table>
+
+    
+
+
+
+
+
+        <br><br>
+
+
+
+
+        <h3>My Personal Details</h3>
+        <table>
+            <tbody>
+                <tr>
+                    <td><label for="myName_1">First Name</label></td>
+                    <td><input type="text" id="myName_1"></td>
+                </tr>
+                <tr>
+                    <td><label for="myName_2">Last Name</label></td>
+                    <td><input type="text" id="myName_2"></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

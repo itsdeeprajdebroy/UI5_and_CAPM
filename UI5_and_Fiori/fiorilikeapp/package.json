@@ -1,0 +1,11 @@
+{
+  "name": "fiorilikeapp",
+  "version": "1.0.0",
+  "description": "My Fiori like app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Deepraj",
+  "license": "ISC"
+}

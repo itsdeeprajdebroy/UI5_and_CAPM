@@ -1,0 +1,92 @@
+{
+    "sap.app": {
+        "id": "ddi.mm.Product",
+        "type": "application",
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "i18n": "i18n/i18n.properties"
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "deviceTypes":{
+            "desktop": true,
+            "phone": true,
+            "tablet": true
+        }
+    },
+    "sap.ui5":{
+        "dependencies": {
+            "minUI5Version":"1.120.0",
+            "libs": {
+                "sap.m":{},
+                "sap.ui.layout":{},
+                "sap.ui.core":{}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n":{
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "ddi.mm.Product.i18n.i18n"
+                }
+            },
+            "":{
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "model/Fruits.json"
+            }
+        },
+        "rootView":{
+            "viewName": "ddi.mm.Product.view.App",
+            "id": "idView",
+            "type": "XML"
+        },
+        "routing": {
+            "config":{
+                "routerClass": "sap.m.routing.Router",
+                "viewPath": "ddi.mm.Product.view",
+                "viewType": "XML",
+                "controlId": "appCon"
+            },
+            "routes":[
+                {
+                    "name": "routeFirst",
+                    "pattern": "",
+                    "target":[
+                        "TargetView1", "TargetEmpty"
+                    ]
+                },
+                {
+                    "name": "routeSecond",
+                    "pattern": "fruits/{fruitId}",
+                    "target":[
+                        "TargetView1", "TargetView2"
+                    ]
+                }
+            ],
+            "targets": {
+                "TargetView1":{
+                    "viewId": "idView1",
+                    "viewName": "View1",
+                    "controlAggregation": "masterPages"
+                },
+                "TargetEmpty":{
+                    "viewId": "idEmpty",
+                    "viewName": "Empty",
+                    "controlAggregation": "detailPages"
+                },
+                "TargetView2":{
+                    "viewId": "idView2",
+                    "viewName": "View2",
+                    "controlAggregation": "detailPages"
+                }
+            }
+        }
+    }
+}

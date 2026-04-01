@@ -1,0 +1,366 @@
+{
+  "fruits": [
+    {
+      "name": "Mango",
+      "type": "alkaline",
+      "color": "Yellow-Orange",
+      "price": 120,
+      "unit": "kg",
+      "healthBenefit": "Rich in Vitamin C, boosts immunity, aids digestion",
+      "image": "https://images.unsplash.com/photo-1553279768-865429fa0078?w=500",
+      "supplier": "Tropical Harvest Co.",
+      "minOrderQty": 50,
+      "status": "A"
+    },
+    {
+      "name": "Orange",
+      "type": "citrus",
+      "color": "Orange",
+      "price": 80,
+      "unit": "kg",
+      "healthBenefit": "High in Vitamin C, supports immune system, antioxidant properties",
+      "image": "https://images.unsplash.com/photo-1580052614034-c55d20bfee3b?w=500",
+      "supplier": "Citrus Valley Farms",
+      "minOrderQty": 100,
+      "status": "A"
+    },
+    {
+      "name": "Apple",
+      "type": "Applie",
+      "color": "Red",
+      "price": 150,
+      "unit": "kg",
+      "healthBenefit": "High in fiber, supports heart health, regulates blood sugar",
+      "image": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=500",
+      "supplier": "Mountain Orchard Ltd.",
+      "minOrderQty": 75,
+      "status": "A"
+    },
+    {
+      "name": "Lemon",
+      "type": "citrus",
+      "color": "Yellow",
+      "price": 60,
+      "unit": "kg",
+      "healthBenefit": "Detoxifies body, aids weight loss, improves skin quality",
+      "image": "https://images.unsplash.com/photo-1590502593747-42a996133562?w=500",
+      "supplier": "Citrus Valley Farms",
+      "minOrderQty": 80,
+      "status": "A"
+    },
+    {
+      "name": "Banana",
+      "type": "alkaline",
+      "color": "Yellow",
+      "price": 50,
+      "unit": "dozen",
+      "healthBenefit": "Rich in potassium, boosts energy, improves digestion",
+      "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=500",
+      "supplier": "Tropical Harvest Co.",
+      "minOrderQty": 200,
+      "status": "A"
+    },
+    {
+      "name": "Grapefruit",
+      "type": "citrus",
+      "color": "Pink",
+      "price": 95,
+      "unit": "kg",
+      "healthBenefit": "Aids weight loss, lowers cholesterol, rich in antioxidants",
+      "image": "https://images.unsplash.com/photo-1618897996318-5a901fa6ca71?w=500",
+      "supplier": "Sunshine Growers",
+      "minOrderQty": 60,
+      "status": "O"
+    },
+    {
+      "name": "Watermelon",
+      "type": "alkaline",
+      "color": "Green-Red",
+      "price": 40,
+      "unit": "kg",
+      "healthBenefit": "Hydrating, rich in lycopene, supports heart health",
+      "image": "https://images.unsplash.com/photo-1595475884562-073c30d45670?w=500",
+      "supplier": "Fresh Fields Alliance",
+      "minOrderQty": 150,
+      "status": "A"
+    },
+    {
+      "name": "Grapes",
+      "type": "neutral",
+      "color": "Green-Purple",
+      "price": 180,
+      "unit": "kg",
+      "healthBenefit": "Rich in antioxidants, supports brain health, anti-inflammatory",
+      "image": "https://images.unsplash.com/photo-1423483641154-5411ec9c0ddf?w=500",
+      "supplier": "Vineyard Distributors",
+      "minOrderQty": 50,
+      "status": "A"
+    },
+    {
+      "name": "Papaya",
+      "type": "alkaline",
+      "color": "Orange",
+      "price": 70,
+      "unit": "kg",
+      "healthBenefit": "Aids digestion, rich in enzymes, anti-inflammatory properties",
+      "image": "https://images.unsplash.com/photo-1526318472351-c75fcf070305?w=500",
+      "supplier": "Tropical Harvest Co.",
+      "minOrderQty": 100,
+      "status": "D"
+    },
+    {
+      "name": "Pineapple",
+      "type": "citrus",
+      "color": "Yellow",
+      "price": 85,
+      "unit": "kg",
+      "healthBenefit": "Contains bromelain, reduces inflammation, boosts immunity",
+      "image": "https://images.unsplash.com/photo-1550828520-4cb496926fc9?w=500",
+      "supplier": "Island Fresh Exports",
+      "minOrderQty": 120,
+      "status": "A"
+    }
+  ],
+  "suppliers": [
+    {
+      "name": "Tropical Harvest Co.",
+      "city": "Mumbai",
+      "country": "India",
+      "capacity": 5000,
+      "fruits": [
+        {
+          "name": "Mango",
+          "minQty": 50
+        },
+        {
+          "name": "Banana",
+          "minQty": 200
+        },
+        {
+          "name": "Papaya",
+          "minQty": 100
+        }
+      ],
+      "contactName": "Rajesh Kumar",
+      "phoneNo": "+91-22-12345678",
+      "sinceWhen": "2015"
+    },
+    {
+      "name": "Citrus Valley Farms",
+      "city": "Nagpur",
+      "country": "India",
+      "capacity": 3500,
+      "fruits": [
+        {
+          "name": "Orange",
+          "minQty": 100
+        },
+        {
+          "name": "Lemon",
+          "minQty": 80
+        }
+      ],
+      "contactName": "Priya Sharma",
+      "phoneNo": "+91-712-9876543",
+      "sinceWhen": "2012"
+    },
+    {
+      "name": "Mountain Orchard Ltd.",
+      "city": "Shimla",
+      "country": "India",
+      "capacity": 2800,
+      "fruits": [
+        {
+          "name": "Apple",
+          "minQty": 75
+        }
+      ],
+      "contactName": "Vikram Singh",
+      "phoneNo": "+91-177-2345678",
+      "sinceWhen": "2008"
+    },
+    {
+      "name": "Sunshine Growers",
+      "city": "Bangalore",
+      "country": "India",
+      "capacity": 4200,
+      "fruits": [
+        {
+          "name": "Grapefruit",
+          "minQty": 60
+        }
+      ],
+      "contactName": "Anita Desai",
+      "phoneNo": "+91-80-87654321",
+      "sinceWhen": "2018"
+    },
+    {
+      "name": "Fresh Fields Alliance",
+      "city": "Pune",
+      "country": "India",
+      "capacity": 6000,
+      "fruits": [
+        {
+          "name": "Watermelon",
+          "minQty": 150
+        }
+      ],
+      "contactName": "Amit Patel",
+      "phoneNo": "+91-20-11223344",
+      "sinceWhen": "2010"
+    },
+    {
+      "name": "Vineyard Distributors",
+      "city": "Nashik",
+      "country": "India",
+      "capacity": 3000,
+      "fruits": [
+        {
+          "name": "Grapes",
+          "minQty": 50
+        }
+      ],
+      "contactName": "Suresh Kadam",
+      "phoneNo": "+91-253-6677889",
+      "sinceWhen": "2014"
+    },
+    {
+      "name": "Island Fresh Exports",
+      "city": "Goa",
+      "country": "India",
+      "capacity": 2500,
+      "fruits": [
+        {
+          "name": "Pineapple",
+          "minQty": 120
+        }
+      ],
+      "contactName": "Maria Fernandes",
+      "phoneNo": "+91-832-5544332",
+      "sinceWhen": "2016"
+    },
+    {
+      "name": "Organic Farms United",
+      "city": "Coimbatore",
+      "country": "India",
+      "capacity": 4500,
+      "fruits": [
+        {
+          "name": "Banana",
+          "minQty": 150
+        },
+        {
+          "name": "Papaya",
+          "minQty": 80
+        }
+      ],
+      "contactName": "Lakshmi Iyer",
+      "phoneNo": "+91-422-7788990",
+      "sinceWhen": "2011"
+    },
+    {
+      "name": "Green Valley Produce",
+      "city": "Hyderabad",
+      "country": "India",
+      "capacity": 5500,
+      "fruits": [
+        {
+          "name": "Mango",
+          "minQty": 100
+        },
+        {
+          "name": "Watermelon",
+          "minQty": 120
+        }
+      ],
+      "contactName": "Sanjay Reddy",
+      "phoneNo": "+91-40-99887766",
+      "sinceWhen": "2013"
+    },
+    {
+      "name": "Premium Fruits International",
+      "city": "Delhi",
+      "country": "India",
+      "capacity": 7000,
+      "fruits": [
+        {
+          "name": "Apple",
+          "minQty": 100
+        },
+        {
+          "name": "Grapes",
+          "minQty": 75
+        },
+        {
+          "name": "Orange",
+          "minQty": 150
+        }
+      ],
+      "contactName": "Arjun Malhotra",
+      "phoneNo": "+91-11-22334455",
+      "sinceWhen": "2009"
+    }
+  ],
+  "cities": [
+    {
+      "name": "Mumbai",
+      "state": "Maharashtra",
+      "population": 20961472,
+      "famousFor": "Alphonso Mango (King of Mangoes)"
+    },
+    {
+      "name": "Nagpur",
+      "state": "Maharashtra",
+      "population": 2405665,
+      "famousFor": "Nagpur Oranges (Santra)"
+    },
+    {
+      "name": "Shimla",
+      "state": "Himachal Pradesh",
+      "population": 169758,
+      "famousFor": "Himalayan Apples"
+    },
+    {
+      "name": "Bangalore",
+      "state": "Karnataka",
+      "population": 12764935,
+      "famousFor": "Grapes and Pomegranates"
+    },
+    {
+      "name": "Pune",
+      "state": "Maharashtra",
+      "population": 6430000,
+      "famousFor": "Watermelon and Guava"
+    },
+    {
+      "name": "Nashik",
+      "state": "Maharashtra",
+      "population": 1486053,
+      "famousFor": "Grapes (Wine Grapes)"
+    },
+    {
+      "name": "Goa",
+      "state": "Goa",
+      "population": 1458545,
+      "famousFor": "Cashew Apple and Pineapple"
+    },
+    {
+      "name": "Coimbatore",
+      "state": "Tamil Nadu",
+      "population": 2151466,
+      "famousFor": "Banana and Coconut"
+    },
+    {
+      "name": "Hyderabad",
+      "state": "Telangana",
+      "population": 10004144,
+      "famousFor": "Mango (Banganapalle variety)"
+    },
+    {
+      "name": "Delhi",
+      "state": "Delhi",
+      "population": 16753235,
+      "famousFor": "Imported fruits hub - Apples, Grapes, Citrus"
+    }
+  ]
+}

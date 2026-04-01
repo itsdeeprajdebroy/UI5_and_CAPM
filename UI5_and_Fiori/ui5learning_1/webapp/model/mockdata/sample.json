@@ -1,0 +1,122 @@
+{
+  "magic": true,
+  "employees": [
+    {
+      "id": 1,
+      "name": "John Wick",
+      "age": 35,
+      "department": "Operations",
+      "salary": 1000,
+      "currency": "USD",
+      "rating": 4.5,
+      "mStaus": "C",
+      "gender": "M",
+      "smoker": true,
+      "dob": "1988-05-15T10:30:00Z",
+      "address": {
+        "street": "123 Main St",
+        "city": "New York",
+        "country": "USA"
+      },
+      "skills": [
+        { "name": "SAP UI5", "level": "Expert" },
+        { "name": "JavaScript", "level": "Advanced" }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Jane Doe",
+      "age": 28,
+      "department": "Finance",
+      "salary": 1200,
+      "currency": "GBP",
+      "rating": 4.7,
+      "mStaus": "S",
+      "gender": "M",
+      "smoker": false,
+      "dob": "1900-05-15T10:30:00Z",
+      "address": {
+        "street": "456 Elm St",
+        "city": "London",
+        "country": "UK"
+      },
+      "skills": [
+        { "name": "ABAP", "level": "Intermediate" },
+        { "name": "Fiori", "level": "Advanced" }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Alice Smith",
+      "age": 30,
+      "department": "Human Resources",
+      "salary": 1100,
+      "currency": "EUR",
+      "rating": 4.2,
+      "mStaus": "C",
+      "gender": "F",
+      "smoker": true,
+      "dob": "1905-05-15T10:30:00Z",
+      "address": {
+        "street": "789 Oak Ave",
+        "city": "Berlin",
+        "country": "Germany"
+      },
+      "skills": [
+        { "name": "Recruitment", "level": "Advanced" },
+        { "name": "SAP SuccessFactors", "level": "Intermediate" }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Carlos Martinez",
+      "age": 42,
+      "department": "IT",
+      "salary": 1500,
+      "currency": "EUR",
+      "rating": 4.8,
+      "mStaus": "C",
+      "gender": "M",
+      "smoker": false,
+      "dob": "1905-05-4T10:30:00Z",
+      "address": {
+        "street": "321 Maple Rd",
+        "city": "Madrid",
+        "country": "Spain"
+      },
+      "skills": [
+        { "name": "SAP Basis", "level": "Expert" },
+        { "name": "Networking", "level": "Advanced" }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Priya Patel",
+      "age": 26,
+      "department": "Sales",
+      "salary": 900,
+      "currency": "INR",
+      "rating": 4.0,
+      "mStaus": "S",
+      "gender": "F",
+      "smoker": false,
+      "dob": "1998-05-15T10:30:00Z",
+      "address": {
+        "street": "654 Pine St",
+        "city": "Mumbai",
+        "country": "India"
+      },
+      "skills": [
+        { "name": "Negotiation", "level": "Advanced" },
+        { "name": "CRM", "level": "Intermediate" }
+      ]
+    }
+  ],
+  "cities": [
+    { "name": "New York", "country": "USA", "population": 8419600 },
+    { "name": "London", "country": "UK", "population": 8982000 },
+    { "name": "Berlin", "country": "Germany", "population": 3769000 },
+    { "name": "Madrid", "country": "Spain", "population": 3223000 },
+    { "name": "Mumbai", "country": "India", "population": 20411000 }
+  ]
+}

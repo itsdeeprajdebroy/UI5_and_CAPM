@@ -1,0 +1,40 @@
+{
+  "URL.headers.x-sap-security-session": "create",
+  "binding": {
+    "env": "cf",
+    "id": "2e052da0-8765-479b-be07-487e6a7006bd",
+    "type": "oauth",
+    "version": "1.0.1.1"
+  },
+  "catalogs": {
+    "abap": {
+      "path": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2",
+      "type": "sap_abap_catalog_v1"
+    }
+  },
+  "endpoints": {
+    "abap": "https://276860ba-d056-4682-9f44-b4d9470cc840.abap.eu10.hana.ondemand.com"
+  },
+  "preserve_host_header": true,
+  "sap.cloud.service": "com.sap.cloud.abap",
+  "systemid": "L01",
+  "uaa": {
+    "apiurl": "https://api.authentication.eu10.hana.ondemand.com",
+    "clientid": "sb-xs-276860ba-d056-4682-9f44-b4d9470cc840!b493352|xsuaa-abapcp-prod-eu10!b4584",
+    "clientsecret": "2e052da0-8765-479b-be07-487e6a7006bd$sd4NNYX1lF-2tDndft87BvqCxSv2HEap4c6ZYI7aoW8=",
+    "credential-type": "binding-secret",
+    "identityzone": "d82-abap-ilt",
+    "identityzoneid": "50cf5bfe-5ef7-443a-933c-1ca22d1a9e92",
+    "sburl": "https://internal-xsuaa.authentication.eu10.hana.ondemand.com",
+    "serviceInstanceId": "276860ba-d056-4682-9f44-b4d9470cc840",
+    "subaccountid": "50cf5bfe-5ef7-443a-933c-1ca22d1a9e92",
+    "tenantid": "50cf5bfe-5ef7-443a-933c-1ca22d1a9e92",
+    "tenantmode": "dedicated",
+    "uaadomain": "authentication.eu10.hana.ondemand.com",
+    "url": "https://d82-abap-ilt.authentication.eu10.hana.ondemand.com",
+    "verificationkey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr03usa0kuiOfPS+DyA9t\nTt5RdCWadkQ9TwsyDf/78bLPIviKlCAPWmfE5MC2+cSouViJ05EBujFd245TLfjr\ngDWNlz0Ti9b6clg1gztJN+a4c+wZcUV3QBUastYfQbNEblQhsG8GqsoikGdfA0p3\nbSaWdqlSzpBQdM/i6nKkUd7344vNhSHrGdOCH64oNZh3h8KJWrpNGxmXVwMGx7tS\nDeE0byLc0b+aclR/ArBEDYJ7aXryP2nOWPJ8nUsTLx5A8TP5I3hoJ68QPnL6zAZV\n09/0DxkZf5WinDpd4TyaziH8oini47xxoOxyDqU9Y2xwVzjCo2b7+A0044Oh5phu\nFQIDAQAB\n-----END PUBLIC KEY-----",
+    "xsappname": "xs-276860ba-d056-4682-9f44-b4d9470cc840!b493352|xsuaa-abapcp-prod-eu10!b4584",
+    "zoneid": "50cf5bfe-5ef7-443a-933c-1ca22d1a9e92"
+  },
+  "url": "https://276860ba-d056-4682-9f44-b4d9470cc840.abap.eu10.hana.ondemand.com"
+}

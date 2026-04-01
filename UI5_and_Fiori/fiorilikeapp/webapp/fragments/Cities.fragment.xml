@@ -1,0 +1,22 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+    <!-- Select control -> it allows one item, first item is already selected and dosen't allow custom data -->
+    <Select items="{/cities}">
+        <items>
+            <core:Item key="{name}" text="{name}"></core:Item>
+        </items>
+    </Select>
+
+    <!-- Combo Box -> This helps to type custom Data means it has both Dopdown + Input functionality -->
+    <ComboBox items="{/cities}">
+        <items>
+            <core:Item key="{name}" text="{name}"></core:Item>
+        </items>
+    </ComboBox>
+
+    <!-- MultiComboBox -  This helps to type custom Data means it has both Dopdown + Input functionality also allows choosing multiple data -->
+    <MultiComboBox items="{/cities}">
+        <items>
+            <core:Item key="{name}" text="{name}"></core:Item>
+        </items>
+    </MultiComboBox>
+</core:FragmentDefinition>

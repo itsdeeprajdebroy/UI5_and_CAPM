@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script 
+            src="https://ui5.sap.com/resources/sap-ui-core.js"
+            data-sap-ui-libs="sap.m"
+            data-sap-ui-theme="sap_fiori_3_dark"
+            data-sap-ui-bindingSyntax="complex"
+            data-sap-ui-resourceroots='{
+                "ddi.mm.Product": "./"
+            }'>
+        </script>
+
+        <script>
+
+            // Creating a new Component Container, Basically by using it UI5 searches for Component.js file in our webapp folder, when it finds it instantiate it >> thats how our Fiori application starts
+
+            // ComponentContainer is a SAP UI5 control used to load and display a Component (like Component.js) inside the HTML page. It acts as a wrapper that initializes the component, manages its lifecycle, and renders its main view in the browser.
+
+            const oComponent = new sap.ui.core.ComponentContainer({
+                name: "ddi.mm.Product"
+            });
+
+            // loads the App.view.xml in main div
+            oComponent.placeAt("content")
+
+        </script>
+    </head>
+    <body class="sapUiBody">
+        <div id="content"></div>
+    </body>
+</html>

@@ -1,0 +1,117 @@
+{
+    "magic": false,
+    "employees": [
+        {
+            "id": 1,
+            "name": "Michael Jordan",
+            "age": 40,
+            "department": "Marketing",
+            "salary": 1300,
+            "rating": 4.9,
+            "mStaus": "S",
+            "gender": "M",
+            "smoker": false,
+            "dob": "1983-02-17T09:00:00Z",
+            "address": {
+                "street": "100 Airness Blvd",
+                "city": "Chicago",
+                "country": "USA"
+            },
+            "skills": [
+                { "name": "Branding", "level": "Expert" },
+                { "name": "Public Speaking", "level": "Advanced" }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Emily Clark",
+            "age": 32,
+            "department": "Legal",
+            "salary": 1400,
+            "rating": 4.6,
+            "mStaus": "C",
+            "gender": "F",
+            "smoker": false,
+            "dob": "1991-07-12T11:15:00Z",
+            "address": {
+                "street": "200 Justice Ln",
+                "city": "Sydney",
+                "country": "Australia"
+            },
+            "skills": [
+                { "name": "Contract Law", "level": "Advanced" },
+                { "name": "Negotiation", "level": "Expert" }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Liam Nguyen",
+            "age": 29,
+            "department": "Research",
+            "salary": 1250,
+            "rating": 4.3,
+            "mStaus": "S",
+            "gender": "M",
+            "smoker": true,
+            "dob": "1994-03-22T08:45:00Z",
+            "address": {
+                "street": "300 Science Dr",
+                "city": "Toronto",
+                "country": "Canada"
+            },
+            "skills": [
+                { "name": "Data Analysis", "level": "Advanced" },
+                { "name": "Python", "level": "Intermediate" }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Sofia Rossi",
+            "age": 38,
+            "department": "Design",
+            "salary": 1350,
+            "rating": 4.7,
+            "mStaus": "C",
+            "gender": "F",
+            "smoker": false,
+            "dob": "1985-11-30T13:20:00Z",
+            "address": {
+                "street": "400 Art St",
+                "city": "Rome",
+                "country": "Italy"
+            },
+            "skills": [
+                { "name": "UX/UI", "level": "Expert" },
+                { "name": "Photoshop", "level": "Advanced" }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Rajesh Kumar",
+            "age": 27,
+            "department": "Support",
+            "salary": 950,
+            "rating": 4.1,
+            "mStaus": "S",
+            "gender": "M",
+            "smoker": true,
+            "dob": "1996-09-10T07:10:00Z",
+            "address": {
+                "street": "500 Helpdesk Ave",
+                "city": "Bangalore",
+                "country": "India"
+            },
+            "skills": [
+                { "name": "Customer Service", "level": "Advanced" },
+                { "name": "Troubleshooting", "level": "Intermediate" }
+            ]
+        }
+    ],
+    "cities": [
+        { "name": "Chicago", "country": "USA", "population": 2716000 },
+        { "name": "Sydney", "country": "Australia", "population": 5312000 },
+        { "name": "Toronto", "country": "Canada", "population": 2930000 },
+        { "name": "Rome", "country": "Italy", "population": 2873000 },
+        { "name": "Bangalore", "country": "India", "population": 8444000 }
+    ]
+}

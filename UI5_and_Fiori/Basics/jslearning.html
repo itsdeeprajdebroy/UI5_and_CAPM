@@ -1,0 +1,169 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="../Basics/Css/box.css
+    " type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- internal JS -->
+     <script>
+        function myAltertFunction(text){
+            // alert(text)
+            document.write("Hello");
+        }
+
+        function login(){
+            const oUserInput = document.getElementById("idUser");
+            const oPassInput = document.getElementById("idPass");
+
+            const sUserId = oUserInput.value;
+            const sPassId = oPassInput.value;
+
+            if(sUserId === "Raj" && sPassId === "namit"){
+                // alert("Success")
+                document.write("<h3 style='color:aqua'>Login Success</h3>")
+            }
+            else{
+                //alert("Failed")
+                document.getElementById('msg').innerText = "No success";
+                blink()
+            }
+        }
+
+        function blink() {
+            $('#msg').fadeOut(1000, function() {
+                $(this).fadeIn(1000, function() {
+                    blink();
+                })
+            })
+        }
+
+        function julie(){
+            console.log("1. Julie wakes up");
+
+            setTimeout(() => {
+            console.log("3. John collect key from rob");
+            },5000)
+
+            console.log("3. Julie going for office");
+            
+            
+        }
+
+        function onColour(){
+            // Collects all the main div obj in a array.
+            const aMainElements = document.querySelectorAll('.myMain-div');
+
+            aMainElements.forEach((element) => {
+                const oSubDiv1 = element.querySelector('.subdiv1')
+                const oSubDiv2 = element.querySelector('.subdiv2')
+                oSubDiv1.classList.toggle('active-subdiv1')
+                oSubDiv2.classList.toggle('active-subdiv2')
+            })
+        }
+
+        function createNew(data){
+            const newElement = document.createElement('p');
+
+            newElement.innerText = data.loc;
+
+            const myNew = document.getElementById('myNew');
+
+            myNew.appendChild(newElement);
+        }
+
+        let flag = true;
+        function hide(){
+            $('.myMain-div').fadeOut(3000, () => {
+                if(flag){
+                    alert('Done hidden')
+                    flag = false;
+                }
+            });
+        }
+
+        function show(){
+            $('.myMain-div').fadeIn(3000);
+        }
+
+        function CovidCall(){
+            $.ajax("https://api.rootnet.in/covid19-in/stats/latest", {
+                success: (data) => {
+                    let aData = data.data.regional;
+                    updateDOM(aData);
+                }
+            })
+        }
+
+        function updateDOM(aData){
+            aData.forEach((data) => {
+                createNew(data)
+            })
+        }
+
+     </script>
+</head>
+<body>
+        <div class="myMain-div">
+            <div class="subdiv1">
+                <h3>What is HTML5?</h3>
+            </div>
+            <div class="subdiv2">
+                <p>Html5 is a bascic, Lorem ipsum dolor sit amet, <b><em>consectetur adipisicing elit</em></b>. Dolore repellendus, omnis tenetur nam alias a sint quisquam architecto quis unde nobis, vitae amet doloremque, necessitatibus optio autem inventore et? Deserunt!</p>
+            </div>
+        </div>
+
+        <div class="myMain-div">
+            <div class="subdiv1">
+                <h3>What is CSS?</h3>
+            </div>
+            <div class="subdiv2">
+                <p>Html5 is a bascic, Lorem ipsum dolor sit amet, <b><em>consectetur adipisicing elit</em></b>. Dolore repellendus, omnis tenetur nam alias a sint quisquam architecto quis unde nobis, vitae amet doloremque, necessitatibus optio autem inventore et? Deserunt!</p>
+            </div>
+        </div>
+
+        <div class="myMain-div">
+            <div class="subdiv1">
+                <h3>What is JS?</h3>
+            </div>
+            <div class="subdiv2">
+                <p>Html5 is a bascic, Lorem ipsum dolor sit amet, <b><em>consectetur adipisicing elit</em></b>. Dolore repellendus, omnis tenetur nam alias a sint quisquam architecto quis unde nobis, vitae amet doloremque, necessitatibus optio autem inventore et? Deserunt!</p>
+            </div>
+        </div>
+
+        <div style="clear: left;"></div>
+    <!-- Internal JS -->
+     <!-- Reuse, Extensibility, Modularization -->
+    <button onclick="myAltertFunction('done')">Click Me</button>
+    <button onclick="myAltertFunction('Nahi')">Click Me</button>
+    <button onclick="julie()">Julie</button>
+    <button onclick="onColour()">Colour Change</button>
+    <button onclick="hide()">Hide</button>
+    <button onclick="show()">Show</button>
+    <button onclick="CovidCall()">Covid API</button>
+
+    <br><br>
+    
+    <div>
+        <div>
+            <label>User</label>
+            <input type="text" id="idUser">
+        </div>
+        <div>
+            <label>Password</label>
+            <input type="password" id="idPass">
+        </div>
+        <div>
+            <button onclick="login()">Login</button>
+            <br>
+            <div style="color: red;" id="msg"></div>
+        </div>
+    </div>
+
+    <div id="myNew"></div>
+    <button onclick="createNew()">Create</button>
+    <div id="myNewID"></div>
+
+</body>
+</html>

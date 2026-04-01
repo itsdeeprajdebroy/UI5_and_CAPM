@@ -1,0 +1,11 @@
+<mvc:View 
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="ddi.mm.Product.controller.Empty">
+    <Page title="Empty Page">
+        <Image 
+            src="https://wallpapers.com/images/featured/avengers-vm16xv4a69smdauy.jpg" 
+            height="100%" 
+            width="100%"/>
+    </Page>
+</mvc:View>

@@ -1,0 +1,110 @@
+<!-- 2 or more view can talk to 1 controller -->
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout"
+    xmlns:t="sap.ui.table"
+    xmlns:core="sap.ui.core"
+    controllerName="ui5learning_1.controller.Main">
+    <!-- <Input id="idInput"></Input>
+    <Button text="Press Me" press=".onPress"></Button> -->
+
+    <!-- Dynamically craete Dropdown -->
+    <Select items="{/cities}" id="idSelect" change="onSelectChange">
+        <core:Item key="{name}" text="{country} > {name}"></core:Item>
+    </Select>
+    <Label id="idLabelForSelect"/>
+
+
+    <!-- Table -->
+    <t:Table id="idTable" rows="{/employees}" alternateRowColors="true" selectionMode="Single" visibleRowCount="3" rowSelectionChange="onSelectionChange">
+        <t:columns>
+            <t:Column label="{i18n>XCOL_EMPID}">
+                <t:template>
+                    <Text text="{id}"></Text>
+                </t:template>
+            </t:Column>
+            <t:Column label="{i18n>XCOL_EMPNAME}">
+                <t:template>
+                    <Input value="{path: 'name', formatter: '.formatter.transFormToUpperCase'}"></Input>
+                </t:template>
+            </t:Column>
+            <t:Column label="{i18n>XCOL_DEPT}">
+                <t:template>
+                    <Text text="{department}"></Text>
+                </t:template>
+            </t:Column>
+            <t:Column label="{i18n>XCOL_RATING}">
+                <t:template>
+                    <RatingIndicator value="{rating}" editable="false"></RatingIndicator>
+                </t:template>
+            </t:Column>
+            <t:Column label="{i18n>XCOL_MSTATUS}">
+                <t:template>
+                    <Select selectedKey="{mStaus}">
+                        <!-- key and text decided by selectedkey, if selectedkey is C -> it finds corrosponding key in item and show text, Also if we select say7 Single in view selected key will be S ( took from key )-->
+                        <core:Item key="S" text="{i18n>XTXT_SINGLE}"></core:Item>
+                        <core:Item key="C" text="{i18n>XTXT_MARRIED}"></core:Item>
+                    </Select>
+                </t:template>
+            </t:Column>
+            <t:Column label="{i18n>XCOL_SALARY}">
+                <t:template>
+                    <Text text="{
+                                    parts: [
+                                            {path: 'salary'}, 
+                                            {path: 'currency'}
+                                        ], formatter: '.formatter.salaryConverter'
+                                }"></Text>
+                </t:template>
+            </t:Column>
+            <t:Column label="{i18n>XCOL_SMOKER}">
+                <t:template>
+                    <CheckBox selected="{smoker}" editable="false"></CheckBox>
+                </t:template>
+            </t:Column>
+            <t:Column label="{i18n>XCOL_DOB}">
+                <t:template>
+                    <DatePicker value="{dob}"></DatePicker>
+                </t:template>
+            </t:Column>
+            <t:Column label="{i18n>XCOL_SKILLNAME}">
+                <t:template>
+                    <Text text="{skills/0/name}"></Text>
+                </t:template>
+            </t:Column>
+            <t:Column label="{i18n>XCOL_ACTION}">
+                <t:template>
+                    <Button text="{i18n>XBUT_DELETE}"></Button>
+                </t:template>
+            </t:Column>
+        </t:columns>
+    </t:Table>
+
+
+    <!-- editable = true property of SimpleForm helps to align label with input fields -->
+    <f:SimpleForm editable="true" id="idSimpleForm">
+    <!-- Content is the aggregation of SimpleForm -->
+    <!-- aggregation is loosely coupled so we can have 0..n nos of element inside it -->
+        <f:content>
+            <Label text="{i18n>XCOL_EMPNAME}"></Label>
+            <!-- name model binding -->
+            <!-- <Input id="idInputFirstName" value="{model2>/employees/0/name}" editable="{model2>/magic}"></Input> -->
+            <Input id="idInputFirstName" value="{name}" editable="{/magic}"></Input>
+            <Label text="{i18n>XCOL_SALARY}"></Label>
+            <!-- <Input id="idInputSalary" value="{path: '/employees/0/salary'}"></Input> -->
+            <Input id="idInputSalary" value="{= ${name} === 'Deepraj' ? 50000 : ${salary}}" editable="{= ${name} === 'Rahul' ? false : true}"></Input>
+            <Label text="{i18n>XCOL_ADDRESS}"></Label>
+            <Input id="idInputCurrency" value="{address/country}" editable="{/magic}"></Input>
+            <Label text="{i18n>XCOL_SKILLNAME}"></Label>
+            <!-- <Input id="idInputSkill" value="{model2>/employees/0/skills/0/name}" editable="{model2>/magic}"></Input> -->
+            <Input id="idInputSkill" value="{skills/0/name}" editable="{/magic}"></Input>
+        </f:content>
+    </f:SimpleForm>
+    <Button text="{i18n>XBUT_LOAD}" press="onClickLoad"></Button>
+    <Button text="{i18n>XBUT_INCREMENT}" press="onClickIncrease"></Button>
+    <Button text="{i18n>XBUT_MAGIC}" press="onClickMagic"></Button>
+    <Button text="{i18n>XBUT_DCHANGE}" press="onChange"></Button>
+    <Button text="{i18n>XBUT_PRINT}" press="onPrint"></Button>
+    <Button text="{i18n>XBUT_FLIP}" press="onFlip"></Button>
+</mvc:View>

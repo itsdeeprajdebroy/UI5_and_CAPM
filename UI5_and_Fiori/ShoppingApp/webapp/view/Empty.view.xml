@@ -1,0 +1,12 @@
+<mvc:View  
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="ddi.mm.Shopping.controller.Empty">
+    <Page 
+        title="{i18n>XTIT_emptyTitle}">
+        <Image 
+            src="../img/Stock_Img_1.avif" 
+            height="100%" 
+            width="100%"/>
+    </Page>
+</mvc:View>

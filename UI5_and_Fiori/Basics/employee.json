@@ -1,0 +1,26 @@
+[
+  {
+    "empId": 1,
+    "empName": "Ranjan",
+    "salary": 500000,
+    "currency": "EUR",
+    "skills": ["ui5", "JS"],
+    "gender": "Male"
+  },
+  {
+    "empId": 2,
+    "empName": "Deepraj",
+    "salary": 50000,
+    "currency": "EUR",
+    "skills": ["ui5", "JS", "CAPM"],
+    "gender": "Male"
+  },
+  {
+    "empId": 3,
+    "empName": "Mini",
+    "salary": 500000,
+    "currency": "EUR",
+    "skills": ["ui5", "JS", "CAPM", "Node"],
+    "gender": "Female"
+  }
+]

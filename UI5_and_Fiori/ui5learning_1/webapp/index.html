@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <script 
+            src="https://ui5.sap.com/resources/sap-ui-core.js"
+            data-sap-ui-libs="sap.m"
+            data-sap-ui-theme="sap_fiori_3_dark"
+            data-sap-ui-bindingSyntax="complex"
+            data-sap-ui-resourceroots='{
+                "ui5learning_1": "./"
+            }'>
+            //here in resourceroots we minly give id of app as namespace => webapp folder
+        </script>
+
+        <script>
+
+
+            //Creating our view object - here view is a function 
+            //Factory function which will return the view object - given by SAP
+            // const oView = sap.ui.view({
+            //     id: "idView1",
+            //     viewName: "ui5learning_1.view.Main",
+            //     type: sap.ui.core.mvc.ViewType.JS
+            // });
+
+            // //Placing the view object in the content div
+            // oView.placeAt("content");
+
+
+            const oViewXML = sap.ui.view({
+                id: "idView2",
+                viewName: "ui5learning_1.view.MyXML",
+                type: sap.ui.core.mvc.ViewType.XML
+            });
+
+            //Placing the view object in the content div
+            oViewXML.placeAt("content2");
+
+
+
+            // const oBtn = new sap.m.Button("idBtn", {
+            //     text: "Click Me",
+            //     icon: "sap-icon://accept",
+            //     press: function () {
+            //         //sap.ui.getCore() is the global core instance (basically the object of entire application )
+            //         const oInput = sap.ui.getCore().byId("idInput");
+            //         const oInput2 = sap.ui.getCore().byId("idInput2");
+            //         if(oInput.getValue() === oInput2.getValue()) {
+            //             alert("Login Successful");
+            //         } else {
+            //             alert("Login Failed");  
+                        
+            //         }
+            //     }
+            // })
+
+            // const oInput = new sap.m.Input("idInput", {
+            //     placeholder: "Hello UI5",
+            // })
+
+            // const oInput2 = new sap.m.Input("idInput2", {
+            //     placeholder: "Password",
+            //     type: "Password"
+            // })
+
+
+            // const oLabel = new sap.m.Label("idLabel", {
+            //     text: "Username"
+            // })
+
+            // const oLabel2 = new sap.m.Label("idLabel2", {
+            //     text: "Password"
+            // })
+
+            // oLabel.placeAt("Label");
+            // oLabel2.placeAt("Label2");
+            // oInput2.placeAt("input2");
+            // oInput.placeAt("input");
+            // oBtn.placeAt("button");
+
+        </script>
+    </head>
+    <body class="sapUiBody">
+        <!-- <div id="content"></div> -->
+        <div id="content2"></div>
+        <!-- <div id="Label"></div>
+        <div id="input"></div>
+        <div id="Label2"></div>
+        <div id="input2"></div>
+        <div id="button"></div> -->
+    </body>
+</html>

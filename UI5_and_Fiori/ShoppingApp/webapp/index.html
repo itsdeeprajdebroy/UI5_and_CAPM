@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script 
+            src="https://ui5.sap.com/resources/sap-ui-core.js"
+            data-sap-ui-libs="sap.m"
+            data-sap-ui-theme="sap_fiori_3_dark"
+            data-sap-ui-bindingSyntax="complex"
+            data-sap-ui-resourceroots='{
+                "ddi.mm.Shopping": "./"
+            }'>
+        </script>
+
+        <script>
+            // ComponentContainer is a SAP UI5 control used to load and display a Component (like Component.js) inside the HTML page. It acts as a wrapper that initializes the component, manages its lifecycle, and renders its main view in the browser. Basically ComponentContainer scans/searches for Component.js file and initializes it
+
+            const oComponent = new sap.ui.core.ComponentContainer({
+                name: "ddi.mm.Shopping"
+            });
+
+            // place the component object output (views) at content
+            oComponent.placeAt("content")
+        </script>
+    </head>
+    <body class="sapUiBody">
+        <div id="content"></div>
+    </body>
+</html>

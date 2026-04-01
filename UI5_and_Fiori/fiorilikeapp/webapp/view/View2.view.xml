@@ -1,0 +1,49 @@
+<mvc:View 
+    xmlns:core="sap.ui.core" 
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    controllerName="ddi.mm.Product.controller.View2">
+    <Page 
+        title="This is View2" 
+        showNavButton="true" 
+        navButtonPress="onBack">
+        <content>
+            <ObjectHeader 
+                intro="{healthBenefit}" 
+                title="{name}" 
+                icon="{image}" 
+                number="{price}" 
+                numberUnit="{unit}"/>
+            <IconTabBar >
+                <items>
+                    <IconTabFilter text="Detail" icon="sap-icon://detail-view" iconColor="Tile">
+                    <!-- Simple Form -->
+                        <core:Fragment fragmentName="ddi.mm.Product.fragments.Detail" type="XML"/>
+                    </IconTabFilter>
+                    <IconTabFilter text="Supplier" icon="sap-icon://supplier" iconColor="Positive">
+                    <!-- Table -->
+                        <core:Fragment fragmentName="ddi.mm.Product.fragments.Supplier" type="XML"/>
+                    </IconTabFilter>
+                    <IconTabFilter text="Cities" icon="sap-icon://home" iconColor="Critical">
+                    <!-- Drop down -->
+                        <core:Fragment fragmentName="ddi.mm.Product.fragments.Cities" type="XML"/>
+                    </IconTabFilter>
+                </items>
+            </IconTabBar>
+        </content>
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Button 
+                    text="Save" 
+                    type="Accept" 
+                    press="onSave"/>
+                <Button 
+                    text="Cancel" 
+                    type="Reject" 
+                    press="onBack"/>
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <!-- Internal CSS -->
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            .subdiv1{
+                color: red;
+                border: 1px solid black;
+                padding: 10px;
+                background-color: orange;
+                /* this will allign content of div to center */
+                text-align: center;
+            }
+            .subdiv2{
+                border: 1px solid black;
+                padding: 10px;
+                background-color: pink;
+            }
+            .myMain-div{
+                /* we have reduced duplicate code by adding class hierchy / but cannot do with border as it will not happen individual */
+                width: 200px;
+                /* this display way we can arrange the boxes to left */
+                /* display: inline-block; */
+                /* Another way to float boxes to left */
+                float: left;
+                /* make sure to close the float where you want to stop */
+                margin: 0 0 20 0;
+            }
+            body{
+                background-color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="myMain-div">
+            <div class="subdiv1">
+                <h3>What is HTML5?</h3>
+            </div>
+            <div class="subdiv2">
+                <p>Html5 is a bascic, Lorem ipsum dolor sit amet, <b><em>consectetur adipisicing elit</em></b>. Dolore repellendus, omnis tenetur nam alias a sint quisquam architecto quis unde nobis, vitae amet doloremque, necessitatibus optio autem inventore et? Deserunt!</p>
+            </div>
+        </div>
+
+        <div class="myMain-div">
+            <div class="subdiv1">
+                <h3>What is CSS?</h3>
+            </div>
+            <div class="subdiv2">
+                <p>Html5 is a bascic, Lorem ipsum dolor sit amet, <b><em>consectetur adipisicing elit</em></b>. Dolore repellendus, omnis tenetur nam alias a sint quisquam architecto quis unde nobis, vitae amet doloremque, necessitatibus optio autem inventore et? Deserunt!</p>
+            </div>
+        </div>
+
+        <div class="myMain-div">
+            <div class="subdiv1">
+                <h3>What is JS?</h3>
+            </div>
+            <div class="subdiv2">
+                <p>Html5 is a bascic, Lorem ipsum dolor sit amet, <b><em>consectetur adipisicing elit</em></b>. Dolore repellendus, omnis tenetur nam alias a sint quisquam architecto quis unde nobis, vitae amet doloremque, necessitatibus optio autem inventore et? Deserunt!</p>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- for stopping float left -->
+        <div style="clear:left"></div>
+
+        <h3>My Personal Details</h3>
+        <label for="myName_1">First Name</label>
+        <input type="text" id="myName_1">
+        <label for="myName_2">Last Name</label>
+        <input type="text" id="myName_2">
+    </body>
+</html>

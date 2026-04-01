@@ -1,0 +1,94 @@
+<mvc:View  
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="ddi.mm.Shopping.controller.Home">
+    <Page
+        id="_idHome"
+        title="{i18n>XTIT_homePageTitle}">
+        <headerContent>
+			<Button
+				icon="sap-icon://home"
+                visible="{appView>/isHomeButtonVisible}"/>
+		</headerContent>
+        <subHeader>
+            <Toolbar>
+                <SearchField 
+                    id="searchFieldHome"
+                    tooltip="{i18n>XTOL_searchTooltip}"
+                    liveChange=".onSearch"/>
+            </Toolbar>
+        </subHeader>
+        <content>
+            <!-- List that will comes up on search -->
+            <List 
+                id="productListOnSearch"
+                visible="{appView>/isListVisible}"
+                mode="{= ${device>/system/phone} ? 'None' : 'SingleSelectMaster'}"
+                noDataText="{i18n>XTXT_noDataTextHome}"
+                selectionChange=".onSelectingSearchedItem"
+                items="{
+                    path : '/Products',
+                    sorter : {
+                        path : 'ProductName',
+                        descending : false
+                    }
+                }"
+                busyIndicatorDelay="0">
+                <ObjectListItem 
+                    title="{ProductName}"
+                    number="{
+                        path : 'UnitPrice',
+                        formatter : '.formatter.currencyConverter'
+                    }"
+                    numberUnit="EUR"
+                    type="{= ${device>/system/phone} ? 'Active' : 'Inactive'}">
+                    <attributes>
+                        <ObjectAttribute text="Quantiy : {QuantityPerUnit}"/>
+                    </attributes>
+                    <firstStatus>
+                        <ObjectStatus 
+                            text="{
+                                parts : [
+                                    {path : 'UnitsInStock'},
+                                    {path : 'Discontinued'}
+                                ],
+                                formatter : '.formatter.statusText'
+                            }"
+                            state="{
+                                parts : [
+                                    {path : 'UnitsInStock'},
+                                    {path : 'Discontinued'}
+                                ],
+                                formatter : '.formatter.statusState'
+                            }"/>
+                    </firstStatus>
+                </ObjectListItem>
+            </List>
+            
+            <!-- Category list which will be visibe by default -->
+            <List
+				id="categoryList"
+				headerText="{i18n>XTXT_homeCategoryListHeader}"
+				mode="None"
+				busyIndicatorDelay="0"
+                itemPress=".onCategoryListItemPress"
+                visible="{= !${appView>/isListVisible}}"
+				items="{
+					path : '/Categories',
+					sorter : {
+						path : 'CategoryName',
+						descending: false
+					}
+				}">
+				<items>
+					<StandardListItem
+						title="{CategoryName}"
+						type="Active"
+						description="{Description}"
+						tooltip="{i18n>XTOL_openCategoryProducts} {CategoryName}">
+					</StandardListItem>
+				</items>
+			</List>
+        </content>
+    </Page>
+</mvc:View>

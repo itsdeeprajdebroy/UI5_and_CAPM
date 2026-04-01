@@ -1,0 +1,7 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+          xmlns="sap.m"
+          controllerName="ddi.mm.Product.controller.App">
+    <!-- App - is used for worklist application/ Splitapp is used for master - detail application is the app container which will able to take other views inside it -->
+    <SplitApp id="appCon">
+    </SplitApp>
+</mvc:View>

@@ -1,0 +1,14 @@
+{
+  "name": "shoppingapp",
+  "version": "1.0.0",
+  "description": "Shopping App SAP UI5",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Deepraj",
+  "license": "ISC",
+  "devDependencies": {
+    "ui5-middleware-simpleproxy": "^3.5.2"
+  }
+}

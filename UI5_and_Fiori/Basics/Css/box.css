@@ -1,0 +1,39 @@
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            .subdiv1{
+                color: red;
+                border: 1px solid black;
+                padding: 10px;
+                background-color: orange;
+                /* this will allign content of div to center */
+                text-align: center;
+            }
+            .subdiv2{
+                border: 1px solid black;
+                padding: 10px;
+                background-color: pink;
+            }
+            .myMain-div{
+                /* we have reduced duplicate code by adding class hierchy / but cannot do with border as it will not happen individual */
+                width: 200px;
+                /* this display way we can arrange the boxes to left */
+                /* display: inline-block; */
+                /* Another way to float boxes to left */
+                float: left;
+                /* make sure to close the float where you want to stop */
+                margin: 0 0 20 0;
+            }
+            body{
+                background-color: aqua;
+            }
+
+            .active-subdiv1{
+                background-color: aqua;
+                color: black;
+            }
+
+            .active-subdiv2{
+                background-color: palevioletred;
+            }

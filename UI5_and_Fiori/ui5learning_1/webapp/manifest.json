@@ -1,0 +1,6 @@
+{
+    "sap.app": {
+        "id": "ui5learning_1",
+        "type": "application"
+    }
+}

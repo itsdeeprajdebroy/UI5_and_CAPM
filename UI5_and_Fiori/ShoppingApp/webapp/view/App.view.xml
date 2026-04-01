@@ -1,0 +1,14 @@
+<mvc:View 
+    xmlns:f="sap.f" 
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    displayBlock="true"
+    controllerName="ddi.mm.Shopping.controller.App">
+    <App>
+        <f:FlexibleColumnLayout 
+            id="appCon"
+            layout="TwoColumnsMidExpanded"
+            backgroundDesign="Translucent">
+        </f:FlexibleColumnLayout >
+    </App>
+</mvc:View>
