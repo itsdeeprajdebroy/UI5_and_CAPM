@@ -1,0 +1,11 @@
+studentId,studentName,gender,rollNo,city,class_id,country_code,houseNo
+S001,Aman Gupta,M,101,Delhi,1,In,101
+S002,Riya Sharma,F,102,Mumbai,1,In,102
+S003,Rohit Das,M,103,Kolkata,2,In,103
+S004,Pooja Singh,F,104,Delhi,2,In,104
+S005,Karan Mehta,M,105,Pune,3,In,105
+S006,Neha Verma,F,106,Jaipur,3,In,106
+S007,Arjun Reddy,M,107,Hyderabad,4,In,107
+S008,Sneha Iyer,F,108,Chennai,4,In,108
+S009,Vikas Yadav,M,109,Lucknow,5,In,109
+S010,Anjali Kumari,F,110,Patna,5,In,110
