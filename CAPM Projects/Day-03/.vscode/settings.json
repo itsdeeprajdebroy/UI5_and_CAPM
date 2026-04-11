@@ -5,6 +5,12 @@
             "driver": "SQLite",
             "name": "mydb",
             "database": "${workspaceFolder:Day-03}/Projects/mycapproject/db.sqlite"
+        },
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "myepmdb",
+            "database": "${workspaceFolder:Day-03}/Projects/mycapapp_epm_model/db.sqlite"
         }
     ]
 }
